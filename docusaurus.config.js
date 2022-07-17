@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'salah-rashad', // Usually your GitHub org/user name.
-  projectName: 'blueprint_system', // Usually your repo name.
+  projectName: 'blueprint_system_docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   // Even if you don't use internalization, you can use this field to set useful
