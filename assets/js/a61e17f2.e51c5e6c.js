@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblueprint_system_docs=self.webpackChunkblueprint_system_docs||[]).push([[8461],{3504:s=>{s.exports=JSON.parse('{"permalink":"/blueprint_system_docs/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

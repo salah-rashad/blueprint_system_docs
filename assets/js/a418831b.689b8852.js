@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblueprint_system_docs=self.webpackChunkblueprint_system_docs||[]).push([[7658],{6294:e=>{e.exports=JSON.parse('{"permalink":"/blueprint_system_docs/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

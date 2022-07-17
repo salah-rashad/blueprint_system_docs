@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblueprint_system_docs=self.webpackChunkblueprint_system_docs||[]).push([[6196],{3793:s=>{s.exports=JSON.parse('{"label":"hola","permalink":"/blueprint_system_docs/blog/tags/hola","allTagsPath":"/blueprint_system_docs/blog/tags","count":1}')}}]);
