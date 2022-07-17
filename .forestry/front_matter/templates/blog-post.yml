@@ -11,6 +11,12 @@ fields:
 - type: list
   name: authors
   label: authors
+  config:
+    use_select: true
+    source:
+      type: documents
+      section: blog
+      file: blog/authors.yml
 - type: list
   name: tags
   label: tags
