@@ -6,25 +6,108 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #7069d2;
+  --ifm-color-primary-dark: #28264d;
+  --ifm-color-primary-darker: #262448;
+  --ifm-color-primary-darkest: #1f1d3b;
+  --ifm-color-primary-light: #312e5e;
+  --ifm-color-primary-lighter: #343062;
+  --ifm-color-primary-lightest: #3a376e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* additional */
+  --ifm-background-color: #eaeaf2;
+  --ifm-color-black: #16182a;
+  --ifm-color-content: var(--ifm-color-black);
+  --ifm-footer-background-color: rgba(0, 0, 0, 0.15);
+  --ifm-color-secondary: #938ddd;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #7069d2;
+  --ifm-color-primary-dark: #5951cb;
+  --ifm-color-primary-darker: #4d45c7;
+  --ifm-color-primary-darkest: #3b33aa;
+  --ifm-color-primary-light: #8781d9;
+  --ifm-color-primary-lighter: #938ddd;
+  --ifm-color-primary-lightest: #b5b2e8;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* additional */
+  background-color: #16182a;
+  --ifm-color-secondary: var(--ifm-color-white);
+  --ifm-color-content: var(--ifm-color-white);
+  --ifm-color-white: #eaeaf2;
+
+}
+
+
+.navbar {
+  background-color: #7069d2;
+  color: var(--ifm-color-black);
+}
+
+[data-theme='dark'] .navbar {
+  background-color: #2d2a55;
+  color: var(--ifm-color-white);
+}
+
+.navbar__item:active,
+.navbar__item:hover,
+.navbar__link:hover {
+  color: var(--ifm-color-white);
+}
+
+[data-theme='dark'] .navbar__item:active,
+[data-theme='dark'] .navbar__item:hover,
+[data-theme='dark'] .navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+
+.header-image-link:hover {
+  opacity: 0.6;
+}
+
+.header-image-link:before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: flex;
+  height: 24px;
+  width: 24px;
+}
+
+.header-github-link:before {
+  background: url("GitHub-Mark-32px.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: flex;
+  height: 24px;
+  width: 24px;
+}
+
+[data-theme='dark'] .header-github-link:before {
+  background: url("GitHub-Mark-Light-32px.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: flex;
+  height: 24px;
+  width: 24px;
+  
+}
+
+.header-pub-link:before {
+  background: url("https://pub.dev/static/hash-t0ljt5cj/img/dart-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+  display: flex;
+  height: 24px;
+  width: 24px;
 }

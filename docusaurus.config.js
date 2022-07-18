@@ -1,13 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require("prism-react-renderer/themes/nightOwlLight");
+const darkCodeTheme = require("prism-react-renderer/themes/shadesOfPurple");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Blueprint System",
-  tagline: "documentations",
+  tagline: "Documentations",
   url: "https://github.com",
   baseUrl: "/blueprint_system_docs/",
   onBrokenLinks: "throw",
@@ -58,31 +58,77 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
-        },
+        // style: "dark",
+        title: "Blueprint System",
+        // logo: {
+        //   alt: "Blueprint System Logo",
+        //   src: "img/logo.svg",
+        // },
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "getting-started",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+          {
+            label: "Community",
+            position: "left",
+            items: [
+              {
+                href: "#",
+                label: "🎨 Themes",
+              },
+            ],
+          },
+          {
+            href: "#",
+            label: "  ",
             position: "right",
           },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
+          },
+          {
+            href: "#",
+            label: "  ",
+            position: "right",
+          },
+          {
+            href: "#",
+            label: "Demo",
+            position: "right",
+          },
+          {
+            href: "https://github.com/salah-rashad/blueprint_system",
+            position: "right",
+            className: "header-image-link header-github-link",
+            "aria-label": "GitHub repository",
+          },
+          {
+            href: "https://pub.dev/packages/blueprint_system",
+            position: "right",
+            className: "header-image-link header-pub-link",
+            "aria-label": "Pub package",
+          },
+          // {
+          //   href: "https://pub.dev/packages/blueprint_system",
+          //   label: "Pub",
+          //   position: "right",
+          // },
         ],
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
-            title: "Docs",
+            title: "DOCS",
             items: [
               {
                 label: "Tutorial",
@@ -91,14 +137,14 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "SALAH RASHAD",
             items: [
               {
-                label: "Stack Overflow",
+                label: "About",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
               },
               {
-                label: "Discord",
+                label: "Contact",
                 href: "https://discordapp.com/invite/docusaurus",
               },
               {
@@ -108,24 +154,30 @@ const config = {
             ],
           },
           {
-            title: "More",
+            title: "MORE",
             items: [
               {
                 label: "Blog",
                 to: "/blog",
               },
               {
+                href: "https://github.com/salah-rashad/blueprint_system",
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+              },
+              {
+                href: "https://pub.dev/packages/blueprint_system",
+                label: "Pub",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Blueprint System`,
+        // copyright: `Developed with ❤️ by Salah Rashad`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        defaultLanguage: "dart",
       },
     }),
 };
