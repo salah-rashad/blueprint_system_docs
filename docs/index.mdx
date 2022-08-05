@@ -1,0 +1,80 @@
+---
+sidebar_position: 0
+---
+
+import { Feature } from "@site/src/components/custom";
+
+# Getting Started
+
+## What is Blueprint System?
+
+A Flutter library that creates an intractable view with **nodes** (child widgets) that may be added to it. These nodes can be **moved**, **resized**, and **modified**.
+
+![Blueprint System banner](/img/banner-1.png)
+
+<!-- TODO: add features -->
+
+## Features
+
+<Feature>
+  Adding nodes as much as you want and control them anywhere in the project.
+</Feature>
+<Feature>
+  <code>FixedNode</code>: A node that will remain in its predetermined position
+  and cannot be moved with user interactions.
+</Feature>
+<Feature>
+  <code>DraggableNode</code>: A node that can be moved anywhere in the Blueprint
+  with user interaction (drag & drop).
+</Feature>
+<Feature>
+  <code>FloatingNode</code>: A node that will stick to the screen and will not
+  change in interaction with the Blueprint or any other interactions unless you
+  add some modifications to its properties.
+</Feature>
+<Feature>
+  Blueprint <code>zoom in/out</code> & <code>pan</code>.
+</Feature>
+<Feature>
+  Blueprint has <code>rulers</code> to help the user determine the coordinates
+  of the view. It dynamically changes as you zoom in and out: when you zoom in,
+  the ruler's precision increases; when you zoom out, the precision decreases.
+</Feature>
+<Feature>
+  Blueprint includes <code>grid paper</code> as a background with (100x100) line
+  intervals, and you may change the <code>background colour</code>,{" "}
+  <code>show/hide</code> the grid, and <code>snap nodes</code> to the grid.
+</Feature>
+
+## Installation
+
+- ### Method 1 (Recommended)
+
+  run this line in your terminal:
+
+  ```bash
+  flutter pub add blueprint_system
+  ```
+
+- ### Method 2
+
+  add this line to your `pubspec.yaml` dependencies:
+
+  ```yaml title="pubspec.yaml"
+  dependencies:
+  // highlight-start
+    blueprint_system: 0.1.0
+  // highlight-end
+  ```
+
+  then get packages, (Alternatively, your editor might support this)
+
+  ```bash
+  flutter pub get
+  ```
+
+## Additional information
+
+This package is still under development 🚧 and I will do my best to make it more stable.  
+If you encounter any bugs, please **[file an issue](https://github.com/salah-rashad/blueprint_system/issues/new?labels=bug&assignees=salah-rashad)** and I will try to fix them as soon as possible.  
+Pull requests are always welcome! 🦄

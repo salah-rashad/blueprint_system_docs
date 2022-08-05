@@ -63,19 +63,12 @@
   color: var(--ifm-color-primary);
 }
 
-
-.header-image-link:hover {
-  opacity: 0.6;
+.header-github-link:hover {
+  opacity: 0.5;
 }
 
-.header-image-link:before {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  content: "";
-  display: flex;
-  height: 24px;
-  width: 24px;
+.header-pub-link:hover {
+  opacity: 0.5;
 }
 
 .header-github-link:before {
@@ -98,7 +91,6 @@
   display: flex;
   height: 24px;
   width: 24px;
-  
 }
 
 .header-pub-link:before {
@@ -110,4 +102,45 @@
   display: flex;
   height: 24px;
   width: 24px;
+}
+
+.space-right {
+  margin-right: 16px;
+}
+
+.space-left {
+  margin-left: 16px;
+}
+
+.space-16:hover,
+.space-32:hover,
+.space-64:hover {
+  background-color: transparent;
+}
+
+.space-16 {
+  min-width: 16px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.space-32 {
+  min-width: 32px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.space-64 {
+  min-width: 64px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.no-height {
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
 }

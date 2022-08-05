@@ -4,6 +4,19 @@
 const lightCodeTheme = require("prism-react-renderer/themes/nightOwlLight");
 const darkCodeTheme = require("prism-react-renderer/themes/shadesOfPurple");
 
+/**
+ * @typedef {import('@docusaurus/theme-common/src/utils/useThemeConfig').NavbarItem} NavbarItem
+ */
+
+/** @type {(s: string,p: "left" | "right" | undefined, noHeight: boolean) => NavbarItem} TypeScript syntax */
+function __space__(s, p, noHeight = false) {
+  return {
+    href: "#",
+    className: `space-${s} ${noHeight ? "no-height" : ""}`,
+    position: p,
+  };
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Blueprint System",
@@ -12,7 +25,7 @@ const config = {
   baseUrl: "/blueprint_system_docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -34,23 +47,42 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: "docs",
+          path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/salah-rashad/blueprint_system_docs/tree/master/",
+          includeCurrentVersion: true,
+          versions: {
+            current: {
+              badge: true,
+              label: "Next 🚧",
+            },
+          },
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/salah-rashad/blueprint_system_docs/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "api",
+        path: "api",
+        routeBasePath: "api",
+        sidebarPath: require.resolve("./sidebars.js"),
+        disableVersioning: false,
+        lastVersion: "current",
+      },
     ],
   ],
 
@@ -60,16 +92,21 @@ const config = {
       navbar: {
         // style: "dark",
         title: "Blueprint System",
-        // logo: {
-        //   alt: "Blueprint System Logo",
-        //   src: "img/logo.svg",
-        // },
+        logo: {
+          alt: "Blueprint System Logo",
+          src: "img/logo.png",
+        },
         items: [
+          __space__("32", "left", true),
           {
-            type: "doc",
-            docId: "getting-started",
+            to: "/docs",
             position: "left",
             label: "Docs",
+          },
+          {
+            to: "/api",
+            position: "left",
+            label: "API",
           },
           {
             to: "/blog",
@@ -86,62 +123,59 @@ const config = {
               },
             ],
           },
-          {
-            href: "#",
-            label: "  ",
-            position: "right",
-          },
+          __space__("32", "right"),
           {
             type: "docsVersionDropdown",
             position: "right",
           },
+          __space__("64", "right"),
           {
-            href: "#",
-            label: "  ",
-            position: "right",
-          },
-          {
-            href: "#",
+            to: "demo",
             label: "Demo",
             position: "right",
           },
           {
             href: "https://github.com/salah-rashad/blueprint_system",
             position: "right",
-            className: "header-image-link header-github-link",
-            "aria-label": "GitHub repository",
+            className: "header-github-link",
+            title: "GitHub repository",
           },
           {
             href: "https://pub.dev/packages/blueprint_system",
             position: "right",
-            className: "header-image-link header-pub-link",
-            "aria-label": "Pub package",
+            className: "header-pub-link",
+            title: "Pub package",
           },
           // {
           //   href: "https://pub.dev/packages/blueprint_system",
           //   label: "Pub",
           //   position: "right",
           // },
+          __space__("32", "right"),
         ],
       },
       footer: {
         style: "light",
         links: [
           {
-            title: "DOCS",
+            title: "Tools",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Docs",
+                to: "/docs",
+              },
+              {
+                label: "API",
+                to: "/api",
               },
             ],
           },
           {
-            title: "SALAH RASHAD",
+            title: "Salah Rashad",
             items: [
               {
                 label: "About",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                to: "about-me",
               },
               {
                 label: "Contact",
